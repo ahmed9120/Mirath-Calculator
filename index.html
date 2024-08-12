@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        .container {
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 2rem;
+            text-align: center;
+
+        }
+
+        #myForm {
+            border: 1px solid #333;
+            padding: 1rem;
+        }
+
+        #submitBtn {
+            color: white;
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            width: 100%;
+        }
+
+        #submitBtn:hover {
+            background-color: #33333389;
+        }
+
+        #results {
+            width: 100%;
+            height: 50vh;
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+            border: 1px solid #333;
+            line-height: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="myForm">
+            <label for="money">How much money do you have:</label>
+            <input type="number" id="money" name="money"><br>
+
+            <label for="haveWife">Have a wife?</label>
+            <input type="checkbox" id="haveWife" name="haveWife" value="yes"><br>
+
+            <label for="sons">How many sons do you have:</label>
+            <input type="number" id="sons" name="sons"><br>
+
+            <label for="daughters">How many daughters do you have:</label>
+            <input type="number" id="daughters" name="daughters"><br>
+
+            <input type="submit" value="Submit" id="submitBtn">
+        </form>
+    </div>
+    <div id="results">
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
