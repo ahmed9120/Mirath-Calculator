@@ -14,7 +14,9 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
   if (haveWife) {
     let wifeShare = myMoney / 8;
     myMoney -= wifeShare;
-    resultsDiv.innerHTML += `Wife has to take ${wifeShare} Pounds.<br>`;
+    resultsDiv.innerHTML += `Wife has to take ${parseInt(
+      wifeShare
+    )} Pounds.<br>`;
   }
 
   let unitShare = myMoney / (sonsNum * 2 + daughtersNum);
@@ -22,9 +24,13 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
   let daughterShare = unitShare;
 
   if (sonsNum != 0) {
-    resultsDiv.innerHTML += `Each son should take ${sonShare} Pound <br>`;
+    resultsDiv.innerHTML += `Each son should take ${parseInt(
+      sonShare
+    )} Pound <br>`;
   }
   if (daughtersNum != 0) {
-    resultsDiv.innerHTML += `Each daughter should take ${daughterShare} Pound<br>`;
+    resultsDiv.innerHTML += `Each daughter should take ${parseInt(
+      daughterShare
+    )} Pound<br>`;
   }
 });
